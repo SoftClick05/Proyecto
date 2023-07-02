@@ -33,18 +33,19 @@ namespace VersionUno.Clases
 
                 if (dt.Rows.Count == 1)
                 {
-                    form.Hide();
                     
                     switch (Convert.ToInt32(dt.Rows[0][1]))
                     {
                         case 1:
                             new frmPrincipalAdmin().Show();
+                            form.Hide();
                             break;
                         case 2:
                             
                             break;
                         case 3:
                             new frmPrincipalUser().Show();
+                            form.Hide();
                             break;
                         default:
 

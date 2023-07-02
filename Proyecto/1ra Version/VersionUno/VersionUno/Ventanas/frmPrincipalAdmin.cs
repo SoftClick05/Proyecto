@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VersionUno.Clases;
+using VersionUno.Ventanas;
 
 namespace VersionUno
 {
@@ -16,5 +18,13 @@ namespace VersionUno
         {
             InitializeComponent();
         }
+
+        private void btnSesion_Click(object sender, EventArgs e)
+        {
+           this.Close();
+           new Totem().Show();
+        }
+
+        
     }
 }

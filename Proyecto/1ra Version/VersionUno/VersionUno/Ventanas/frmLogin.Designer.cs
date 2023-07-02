@@ -53,7 +53,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(503, 77);
             this.panel1.TabIndex = 0;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            
             // 
             // panel2
             // 
@@ -65,7 +65,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(503, 114);
             this.panel2.TabIndex = 1;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            
             // 
             // label1
             // 
@@ -191,7 +191,7 @@
             this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Totem";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Totem_MouseDown);
+            
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();

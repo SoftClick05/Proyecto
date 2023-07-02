@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using VersionUno.Clases;
+using VersionUno.Ventanas;
 
 namespace VersionUno
 {
@@ -17,11 +18,7 @@ namespace VersionUno
         public Totem()
         {
             InitializeComponent();
-        }
-
-        //Movilidad de ventana
-        
-        
+        }       
         //Visivilidad de texto en los textbox
         private void tbUser_Enter(object sender, EventArgs e)
         {
@@ -63,12 +60,6 @@ namespace VersionUno
             }
         }
         // Fin visivilidad
-        
-        //Modificaciones de diseño
-        
-
-        //Fin - Modificaciones de diseño
-
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
@@ -90,7 +81,9 @@ namespace VersionUno
 
         private void lilblOlvidar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            
+            new frmInvitado().Show();
+            this.Close();
         }
     }
 }
