@@ -20,10 +20,7 @@ namespace VersionUno
         }
 
         //Movilidad de ventana
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        
         
         //Visivilidad de texto en los textbox
         private void tbUser_Enter(object sender, EventArgs e)
@@ -68,23 +65,7 @@ namespace VersionUno
         // Fin visivilidad
         
         //Modificaciones de diseño
-        private void Totem_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void panel2_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
+        
 
         //Fin - Modificaciones de diseño
 

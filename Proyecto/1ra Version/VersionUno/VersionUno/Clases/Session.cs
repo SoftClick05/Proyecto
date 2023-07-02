@@ -33,20 +33,24 @@ namespace VersionUno.Clases
 
                 if (dt.Rows.Count == 1)
                 {
-
                     form.Hide();
-                    if (dt.Rows[0][1].ToString() == "admin")
+                    
+                    switch (Convert.ToInt32(dt.Rows[0][1]))
                     {
-                        new frmPrincipalAdmin().Show();
+                        case 1:
+                            new frmPrincipalAdmin().Show();
+                            break;
+                        case 2:
+                            
+                            break;
+                        case 3:
+                            new frmPrincipalUser().Show();
+                            break;
+                        default:
+
+                            break;
                     }
-                    else if (dt.Rows[0][1].ToString() == "nuser") 
-                    {
-                        new frmPrincipalUser().Show();
-                    }
-               
-                }else if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(passwrd) || usuario == "User" || passwrd == "Password")
-                {
-                    MessageBox.Show("Debe rellenar los campos");
+                    
                 }
                 else 
                 {
