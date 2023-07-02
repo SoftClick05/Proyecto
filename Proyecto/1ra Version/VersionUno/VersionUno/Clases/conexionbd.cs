@@ -18,10 +18,13 @@ namespace VersionUno
         private string port = "3306";
         public MySqlConnection establecerConexion()
         {
+            // Configurar la cadena de conexión utilizando los valores de las propiedades
             string cadenaConexion = "server=" + servidor + ";" + "port=" + port + ";" + "user id=" + user + ";" + "password=" + password + ";" + "database=" + database + ";";
 
+            // Crear una instancia de MySqlConnection utilizando la cadena de conexión
             MySqlConnection conexion = new MySqlConnection(cadenaConexion);
 
+            // Devolver la instancia de MySqlConnection
             return conexion;
         }
     }

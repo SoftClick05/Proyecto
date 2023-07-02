@@ -64,26 +64,27 @@ namespace VersionUno
         // Fin visivilidad
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            
+            // Llamar al método loggear de la clase Session para iniciar sesión
             Session.loggear(tbUser.Text, tbPassword.Text, this);
-            
         }
 
         private void tbUser_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Validar que solo se ingresen números y controlar la longitud máxima
             Controles.ValidarNumerico(e, tbUser, errorProvider);
             Controles.ValidarLargo(e, errorProvider2, tbUser, 8);
         }
 
         private void tbPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
+            // Validar que solo se ingresen números y controlar la longitud máxima
             Controles.ValidarNumerico(e, tbPassword, errorProvider);
             Controles.ValidarLargo(e, errorProvider2, tbPassword, 4);
         }
 
         private void lilblOlvidar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
+            // Abrir el formulario frmInvitado y ocultar el formulario actual
             new frmInvitado().Show();
             this.Hide();
         }
