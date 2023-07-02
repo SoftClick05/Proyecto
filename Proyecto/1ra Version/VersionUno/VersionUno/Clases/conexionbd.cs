@@ -9,7 +9,7 @@ using MySql.Data.MySqlClient;
 
 namespace VersionUno
 {  
-    class conexionbd
+    internal class conexionbd
     {
         private string servidor = "localhost";
         private string database = "versionuno";

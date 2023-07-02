@@ -18,6 +18,8 @@ namespace VersionUno
         public Totem()
         {
             InitializeComponent();
+            //btnIngresar por defecto del formulario
+            //this.AcceptButton = btnIngresar;
         }       
         //Visivilidad de texto en los textbox
         private void tbUser_Enter(object sender, EventArgs e)
@@ -62,28 +64,28 @@ namespace VersionUno
         // Fin visivilidad
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-
+            
             Session.loggear(tbUser.Text, tbPassword.Text, this);
             
         }
 
         private void tbUser_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Controles.validarNumerico(e, tbUser, errorProvider);
-            Controles.validarLargo(e, errorProvider2, tbUser, 8);
+            Controles.ValidarNumerico(e, tbUser, errorProvider);
+            Controles.ValidarLargo(e, errorProvider2, tbUser, 8);
         }
 
         private void tbPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Controles.validarNumerico(e, tbPassword, errorProvider);
-            Controles.validarLargo(e, errorProvider2, tbPassword, 4);
+            Controles.ValidarNumerico(e, tbPassword, errorProvider);
+            Controles.ValidarLargo(e, errorProvider2, tbPassword, 4);
         }
 
         private void lilblOlvidar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             
             new frmInvitado().Show();
-            this.Close();
+            this.Hide();
         }
     }
 }

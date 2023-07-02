@@ -10,7 +10,7 @@ namespace VersionUno.Clases
 {
     internal class Controles
     {
-        public static void validarNumerico(KeyPressEventArgs e, TextBox tbUser, ErrorProvider errorProvider)
+        public static void ValidarNumerico(KeyPressEventArgs e, TextBox tbUser, ErrorProvider errorProvider)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
@@ -20,13 +20,15 @@ namespace VersionUno.Clases
             else
             {
                 errorProvider.Clear();
-
             }
         }
 
-        public static void validarLargo(KeyPressEventArgs e, ErrorProvider errorProvider, TextBox textBox, int maxLength)
+        public static void ValidarLargo(KeyPressEventArgs e, ErrorProvider errorProvider, TextBox textBox, int maxLength)
         {
-            if (textBox.Text.Length >= maxLength && e.KeyChar != (char)Keys.Back)
+            if (textBox.SelectionLength == textBox.TextLength)
+            {
+              e.Handled = false;
+            }else if (textBox.Text.Length >= maxLength && e.KeyChar != (char)Keys.Back)
             {
                 errorProvider.SetError(textBox, $"Use un pin de {maxLength} caracteres");
                 e.Handled = true;

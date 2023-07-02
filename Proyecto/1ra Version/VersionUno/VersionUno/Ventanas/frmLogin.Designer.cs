@@ -53,7 +53,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(503, 77);
             this.panel1.TabIndex = 0;
-            
             // 
             // panel2
             // 
@@ -65,7 +64,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(503, 114);
             this.panel2.TabIndex = 1;
-            
             // 
             // label1
             // 
@@ -191,7 +189,6 @@
             this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Totem";
-            
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();

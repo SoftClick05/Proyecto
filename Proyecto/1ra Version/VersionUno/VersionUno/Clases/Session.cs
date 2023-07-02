@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace VersionUno.Clases
 {
@@ -53,9 +54,13 @@ namespace VersionUno.Clases
                     }
                     
                 }
-                else 
+                else if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(passwrd) || usuario == "User" || passwrd == "Password")
                 {
-                    MessageBox.Show("Usuario y/o contraseña invalidos");
+                    MessageBox.Show("Rellene los campos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                }
+                else
+                {
+                    MessageBox.Show("Usuario y/o contraseña invalidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 }
                
             }

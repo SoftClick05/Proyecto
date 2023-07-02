@@ -46,7 +46,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(487, 114);
+            this.panel1.Size = new System.Drawing.Size(503, 114);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -79,7 +79,7 @@
             this.btnMapa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMapa.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMapa.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnMapa.Location = new System.Drawing.Point(120, 171);
+            this.btnMapa.Location = new System.Drawing.Point(135, 210);
             this.btnMapa.Name = "btnMapa";
             this.btnMapa.Size = new System.Drawing.Size(221, 36);
             this.btnMapa.TabIndex = 3;
@@ -96,7 +96,7 @@
             this.btnHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHorario.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHorario.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnHorario.Location = new System.Drawing.Point(120, 253);
+            this.btnHorario.Location = new System.Drawing.Point(135, 290);
             this.btnHorario.Name = "btnHorario";
             this.btnHorario.Size = new System.Drawing.Size(221, 36);
             this.btnHorario.TabIndex = 3;
@@ -113,7 +113,7 @@
             this.btnClase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClase.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClase.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnClase.Location = new System.Drawing.Point(120, 334);
+            this.btnClase.Location = new System.Drawing.Point(135, 370);
             this.btnClase.Name = "btnClase";
             this.btnClase.Size = new System.Drawing.Size(221, 36);
             this.btnClase.TabIndex = 3;
@@ -130,7 +130,7 @@
             this.btnSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSesion.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSesion.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnSesion.Location = new System.Drawing.Point(322, 492);
+            this.btnSesion.Location = new System.Drawing.Point(331, 522);
             this.btnSesion.Name = "btnSesion";
             this.btnSesion.Size = new System.Drawing.Size(139, 33);
             this.btnSesion.TabIndex = 4;
@@ -143,7 +143,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(487, 550);
+            this.ClientSize = new System.Drawing.Size(503, 589);
             this.Controls.Add(this.btnSesion);
             this.Controls.Add(this.btnClase);
             this.Controls.Add(this.btnHorario);
@@ -153,7 +153,6 @@
             this.Name = "frmPrincipalAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal";
-            
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
