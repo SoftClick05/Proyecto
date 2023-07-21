@@ -28,7 +28,7 @@ namespace VersionUno.Clases
         public static void ValidarLargo(KeyPressEventArgs e, ErrorProvider errorProvider, TextBox textBox, int maxLength)
         {
             // Controlar que no se supere la longitud máxima permitida en el TextBox
-            if (textBox.SelectionLength == textBox.TextLength)
+            if (textBox.SelectionLength == textBox.TextLength && textBox.TextLength != 0)
             {
                 // Permitir la sobrescritura cuando se selecciona todo el texto en el TextBox
                 e.Handled = false;
