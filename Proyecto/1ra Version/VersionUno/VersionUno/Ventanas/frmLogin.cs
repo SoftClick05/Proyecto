@@ -10,17 +10,48 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using VersionUno.Clases;
 using VersionUno.Ventanas;
+using System.Threading;
 
 namespace VersionUno
 {
     public partial class Totem : Form
     {
+        
         public Totem()
         {
             InitializeComponent();
             //btnIngresar por defecto del formulario
             //this.AcceptButton = btnIngresar;
-        }       
+        }
+
+        bool numPadVisible = false;
+        private void NumPadTimer_Tick(object sender, EventArgs e)
+        {
+            if (numPadVisible == false)
+            {
+                PanelNumPad.BringToFront();
+                PanelNumPad.Top -= 60;
+                PanelNumPad.Height += 60;
+                if (PanelNumPad.Size == PanelNumPad.MaximumSize)
+                {                   
+                    numPadVisible = true;
+                    panel3.Location();
+                    NumPadTimer.Stop();
+                }
+            }
+            else
+            {
+                PanelNumPad.Top += 60;
+                PanelNumPad.Height -= 60;
+                if (PanelNumPad.Size == PanelNumPad.MinimumSize)
+                {
+                    NumPadTimer.Stop();
+                    numPadVisible = false;
+                    PanelNumPad.SendToBack();
+                }
+            }
+        }
+
         //Visivilidad de texto en los textbox
         private void tbUser_Enter(object sender, EventArgs e)
         {
@@ -28,6 +59,7 @@ namespace VersionUno
             {
                 tbUser.Text = "";
                 tbUser.ForeColor = Color.LightGray;
+                NumPadTimer.Start();
             }
         }
 
@@ -37,6 +69,8 @@ namespace VersionUno
             {
                 tbUser.Text = "User";
                 tbUser.ForeColor = Color.DimGray;
+                //PanelNumPad.Visible = false;
+                NumPadTimer.Start();
             }
         }
 
@@ -87,6 +121,16 @@ namespace VersionUno
             // Abrir el formulario frmInvitado y ocultar el formulario actual
             new frmInvitado().Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NumPadTimer.Start();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            NumPadTimer.Start();
         }
     }
 }

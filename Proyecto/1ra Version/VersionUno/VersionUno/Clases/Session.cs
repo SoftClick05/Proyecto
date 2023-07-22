@@ -38,6 +38,7 @@ namespace VersionUno.Clases
 
                 if (dt.Rows.Count == 1)
                 {
+                    //ARREGLAR
                     // Verificar el tipo de usuario y realizar acciones específicas
                     switch (Convert.ToInt32(dt.Rows[0][1]))
                     {
