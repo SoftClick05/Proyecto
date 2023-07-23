@@ -14,6 +14,10 @@ using System.Threading;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Runtime.CompilerServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
+<<<<<<< HEAD
+=======
+using System.Xml.Linq;
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
 
 namespace VersionUno
 {
@@ -28,6 +32,7 @@ namespace VersionUno
         }
 
 
+<<<<<<< HEAD
         int posicionActualPanelXUser = 0;
         int posicionActualPanelYUser = 0;
 
@@ -39,12 +44,26 @@ namespace VersionUno
         // 2=Passwd
         int textBoxSeleccionado = 0;
 
+=======
+        private int posicionActualPanelXUser = 0;
+        private int posicionActualPanelYUser = 0;
+
+        private int posicionActualPanelXPasswd = 0;
+        private int posicionActualPanelYPasswd = 0;
+
+        private bool numPadVisible = false;
+
+        private int textBoxSeleccionado = 0;
+        // 1=User
+        // 2=Passwd
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
         private void NumPadTimer_Tick(object sender, EventArgs e)
         {
             if (numPadVisible == false)
             {
                 posicionActualPanelYUser = panelTxtUser.Location.Y;
 
+<<<<<<< HEAD
                 posicionActualPanelYPasswd = panelTxtPasswd.Location.Y;
 
                 PanelNumPad.BringToFront();
@@ -57,32 +76,91 @@ namespace VersionUno
                     panelTxtUser.Location = new System.Drawing.Point(panelTxtUser.Location.X, coordenadaNueva);
                     NumPadTimer.Stop();
                     textBoxSeleccionado = 1;
+=======
+                posicionActualPanelYPasswd = panelConjunto.Location.Y;
+
+                PanelNumPad.BringToFront();
+                PanelNumPad.Top -= 40;
+                PanelNumPad.Height += 40;
+                if (PanelNumPad.Size == PanelNumPad.MaximumSize && tbUser.Focused == true)
+                {
+                    numPadVisible = true;
+
+                    //Obtiene la ubicación del control 'elemento' dentro de 'panel2' en coordenadas de pantalla
+                    Point elementoLocationOnScreen = panelConjunto.PointToScreen(panelTxtUser.Location);
+                    // Convierte las coordenadas de pantalla al sistema de coordenadas cliente del Formulario Principal
+                    Point elementoLocationPrincipal = PointToClient(elementoLocationOnScreen);
+
+                    if (elementoLocationPrincipal.Y > PanelNumPad.Location.Y)
+                    {
+                        int coordenadaNueva = elementoLocationPrincipal.Y - panelTxtUser.Size.Height;
+                        panelTxtUser.Location = new Point(panelTxtUser.Location.X, elementoLocationPrincipal.Y - coordenadaNueva);
+                        NumPadTimer.Stop();
+                        textBoxSeleccionado = 1;
+                        
+                    }
+                    else
+                    {
+                        int coordenadaNueva = panelTxtUser.Location.Y;
+                        panelTxtUser.Location = new Point(panelTxtUser.Location.X, coordenadaNueva);
+                        NumPadTimer.Stop();
+                        textBoxSeleccionado = 1;
+                    }
+                    
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
                 }
                 else if (PanelNumPad.Size == PanelNumPad.MaximumSize && tbPassword.Focused == true)
                 {
                     numPadVisible = true;
+<<<<<<< HEAD
                     int coordenadaNueva = PanelNumPad.Location.Y - panelTxtPasswd.Size.Height;
                     panelTxtPasswd.Location = new System.Drawing.Point(panelTxtPasswd.Location.X, coordenadaNueva);
                     NumPadTimer.Stop();
                     textBoxSeleccionado = 2;
+=======
+                    if ((panelConjunto.Location.Y + panelConjunto.Size.Height) > PanelNumPad.Location.Y)
+                    {
+                        
+                        int coordenadaNueva = PanelNumPad.Location.Y - panelConjunto.Size.Height;
+                        panelConjunto.Location = new Point(panelConjunto.Location.X, coordenadaNueva);
+                        NumPadTimer.Stop();
+                        textBoxSeleccionado = 2;
+                        
+                        
+                    }
+                    else
+                    {
+                        int coordenadaNueva = panelConjunto.Location.Y;
+                        panelConjunto.Location = new Point(panelConjunto.Location.X, coordenadaNueva);
+                        NumPadTimer.Stop();
+                        textBoxSeleccionado = 2;
+                        MessageBox.Show(coordenadaNueva.ToString());
+                    }
+
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
                 }
             }
             else
             {
-                PanelNumPad.Top += 60;
-                PanelNumPad.Height -= 60;
+                PanelNumPad.Top += 40;
+                PanelNumPad.Height -= 40;
                 if (PanelNumPad.Size == PanelNumPad.MinimumSize)
                 {
                     NumPadTimer.Stop();
                     numPadVisible = false;
                     PanelNumPad.SendToBack();
                     panelTxtUser.Location = new System.Drawing.Point(panelTxtUser.Location.X, posicionActualPanelYUser);
+<<<<<<< HEAD
                     panelTxtPasswd.Location = new System.Drawing.Point(panelTxtPasswd.Location.X, posicionActualPanelYPasswd);
+=======
+                    panelConjunto.Location = new System.Drawing.Point(panelConjunto.Location.X, posicionActualPanelYPasswd);
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
                     textBoxSeleccionado = 0;
                 }
             }
         }
 
+<<<<<<< HEAD
         private void agregarNumero(string numero, System.Windows.Forms.TextBox textbox)
         {
             textbox.Text += numero;
@@ -92,6 +170,9 @@ namespace VersionUno
             textbox.Focus();
             textbox.ScrollToCaret();
         }
+=======
+        
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
 
         //Visivilidad de texto en los textbox
         private void tbUser_Enter(object sender, EventArgs e)
@@ -182,6 +263,7 @@ namespace VersionUno
 
         private void button9_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (textBoxSeleccionado == 1)
             {
                 if (tbUser.TextLength == 8)
@@ -206,10 +288,14 @@ namespace VersionUno
                     agregarNumero(btnNum9.Text, tbPassword);
                 }
             }
+=======
+            NumPad.AccionBoton(btnNum9, tbUser, tbPassword, errorProvider, errorProvider2, textBoxSeleccionado);
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
         }
 
         private void btnNum8_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (textBoxSeleccionado == 1)
             {
                 if (tbUser.TextLength == 8)
@@ -234,10 +320,14 @@ namespace VersionUno
                     agregarNumero(btnNum8.Text, tbPassword);
                 }
             }
+=======
+            NumPad.AccionBoton(btnNum8, tbUser, tbPassword, errorProvider, errorProvider2, textBoxSeleccionado);
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
         }
 
         private void btnNum7_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (textBoxSeleccionado == 1)
             {
                 if (tbUser.TextLength == 8)
@@ -262,10 +352,14 @@ namespace VersionUno
                     agregarNumero(btnNum7.Text, tbPassword);
                 }
             }
+=======
+            NumPad.AccionBoton(btnNum7, tbUser, tbPassword, errorProvider, errorProvider2, textBoxSeleccionado);
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
         }
 
         private void btnNum6_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (textBoxSeleccionado == 1)
             {
                 if (tbUser.TextLength == 8)
@@ -290,10 +384,14 @@ namespace VersionUno
                     agregarNumero(btnNum6.Text, tbPassword);
                 }
             }
+=======
+            NumPad.AccionBoton(btnNum6, tbUser, tbPassword, errorProvider, errorProvider2, textBoxSeleccionado);
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
         }
 
         private void btnNum5_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (textBoxSeleccionado == 1)
             {
                 if (tbUser.TextLength == 8)
@@ -318,10 +416,14 @@ namespace VersionUno
                     agregarNumero(btnNum5.Text, tbPassword);
                 }
             }
+=======
+            NumPad.AccionBoton(btnNum5, tbUser, tbPassword, errorProvider, errorProvider2, textBoxSeleccionado);
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
         }
 
         private void btnNum4_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (textBoxSeleccionado == 1)
             {
                 if (tbUser.TextLength == 8)
@@ -346,10 +448,14 @@ namespace VersionUno
                     agregarNumero(btnNum4.Text, tbPassword);
                 }
             }
+=======
+            NumPad.AccionBoton(btnNum4, tbUser, tbPassword, errorProvider, errorProvider2, textBoxSeleccionado);
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
         }
 
         private void btnNum3_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (textBoxSeleccionado == 1)
             {
                 if (tbUser.TextLength == 8)
@@ -374,10 +480,14 @@ namespace VersionUno
                     agregarNumero(btnNum3.Text, tbPassword);
                 }
             }
+=======
+            NumPad.AccionBoton(btnNum3, tbUser, tbPassword, errorProvider, errorProvider2, textBoxSeleccionado);
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
         }
 
         private void btnNum2_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (textBoxSeleccionado == 1)
             {
                 if (tbUser.TextLength == 8)
@@ -402,10 +512,14 @@ namespace VersionUno
                     agregarNumero(btnNum2.Text, tbPassword);
                 }
             }
+=======
+            NumPad.AccionBoton(btnNum2, tbUser, tbPassword, errorProvider, errorProvider2, textBoxSeleccionado);
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
         }
 
         private void btnNum1_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (textBoxSeleccionado == 1)
             {
                 if (tbUser.TextLength == 8)
@@ -430,10 +544,14 @@ namespace VersionUno
                     agregarNumero(btnNum1.Text, tbPassword);
                 }
             }
+=======
+            NumPad.AccionBoton(btnNum1, tbUser, tbPassword, errorProvider, errorProvider2, textBoxSeleccionado);
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
         }
 
         private void btnNum0_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (textBoxSeleccionado == 1)
             {
                 if (tbUser.TextLength == 8)
@@ -458,6 +576,9 @@ namespace VersionUno
                     agregarNumero(btnNum0.Text, tbPassword);
                 }
             }
+=======
+            NumPad.AccionBoton(btnNum0, tbUser, tbPassword, errorProvider, errorProvider2, textBoxSeleccionado);
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
         }
 
         private void btnEnter_Click(object sender, EventArgs e)
@@ -499,7 +620,11 @@ namespace VersionUno
                 else
                 {
                     tbUser.Focus();
+<<<<<<< HEAD
                 }
+=======
+                }   
+>>>>>>> f79831a914cd2789c79f8edf6db46cce408f505a
             }else if (textBoxSeleccionado == 2)
             {
                 if (!string.IsNullOrEmpty(tbPassword.Text) && tbPassword.Text.Length > 0)

@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Controles.cs" />
+    <Compile Include="Clases\NumPad.cs" />
     <Compile Include="Clases\Session.cs" />
     <Compile Include="Clases\Usuarios.cs" />
     <Compile Include="Clases\conexionbd.cs" />
