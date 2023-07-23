@@ -56,12 +56,14 @@
             this.tbUser = new System.Windows.Forms.TextBox();
             this.panelTxtUser = new System.Windows.Forms.Panel();
             this.panelTxtPasswd = new System.Windows.Forms.Panel();
+            this.panelConjunto = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             this.PanelNumPad.SuspendLayout();
             this.panelTxtUser.SuspendLayout();
             this.panelTxtPasswd.SuspendLayout();
+            this.panelConjunto.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -180,7 +182,7 @@
             // 
             // PanelNumPad
             // 
-            this.PanelNumPad.BackColor = System.Drawing.Color.White;
+            this.PanelNumPad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.PanelNumPad.Controls.Add(this.btnEnter);
             this.PanelNumPad.Controls.Add(this.btnNum0);
             this.PanelNumPad.Controls.Add(this.btnDelete);
@@ -195,7 +197,7 @@
             this.PanelNumPad.Controls.Add(this.btnNum7);
             this.PanelNumPad.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelNumPad.Location = new System.Drawing.Point(0, 517);
-            this.PanelNumPad.MaximumSize = new System.Drawing.Size(503, 415);
+            this.PanelNumPad.MaximumSize = new System.Drawing.Size(503, 320);
             this.PanelNumPad.MinimumSize = new System.Drawing.Size(503, 72);
             this.PanelNumPad.Name = "PanelNumPad";
             this.PanelNumPad.Size = new System.Drawing.Size(503, 72);
@@ -203,9 +205,14 @@
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(372, 281);
+            this.btnEnter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnEnter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnEnter.FlatAppearance.BorderSize = 0;
+            this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnter.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnEnter.Location = new System.Drawing.Point(329, 259);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(119, 127);
+            this.btnEnter.Size = new System.Drawing.Size(75, 50);
             this.btnEnter.TabIndex = 22;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = true;
@@ -213,9 +220,14 @@
             // 
             // btnNum0
             // 
-            this.btnNum0.Location = new System.Drawing.Point(372, 148);
+            this.btnNum0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnNum0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNum0.FlatAppearance.BorderSize = 0;
+            this.btnNum0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNum0.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnNum0.Location = new System.Drawing.Point(89, 259);
             this.btnNum0.Name = "btnNum0";
-            this.btnNum0.Size = new System.Drawing.Size(119, 127);
+            this.btnNum0.Size = new System.Drawing.Size(75, 50);
             this.btnNum0.TabIndex = 21;
             this.btnNum0.Text = "0";
             this.btnNum0.UseVisualStyleBackColor = true;
@@ -223,9 +235,14 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(372, 15);
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnDelete.Location = new System.Drawing.Point(209, 259);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(119, 127);
+            this.btnDelete.Size = new System.Drawing.Size(75, 50);
             this.btnDelete.TabIndex = 20;
             this.btnDelete.Text = "<--";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -233,9 +250,14 @@
             // 
             // btnNum3
             // 
-            this.btnNum3.Location = new System.Drawing.Point(252, 281);
+            this.btnNum3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnNum3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNum3.FlatAppearance.BorderSize = 0;
+            this.btnNum3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNum3.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnNum3.Location = new System.Drawing.Point(329, 178);
             this.btnNum3.Name = "btnNum3";
-            this.btnNum3.Size = new System.Drawing.Size(114, 127);
+            this.btnNum3.Size = new System.Drawing.Size(75, 50);
             this.btnNum3.TabIndex = 19;
             this.btnNum3.Text = "3";
             this.btnNum3.UseVisualStyleBackColor = true;
@@ -243,9 +265,14 @@
             // 
             // btnNum6
             // 
-            this.btnNum6.Location = new System.Drawing.Point(252, 148);
+            this.btnNum6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnNum6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNum6.FlatAppearance.BorderSize = 0;
+            this.btnNum6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNum6.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnNum6.Location = new System.Drawing.Point(329, 103);
             this.btnNum6.Name = "btnNum6";
-            this.btnNum6.Size = new System.Drawing.Size(114, 127);
+            this.btnNum6.Size = new System.Drawing.Size(75, 50);
             this.btnNum6.TabIndex = 18;
             this.btnNum6.Text = "6";
             this.btnNum6.UseVisualStyleBackColor = true;
@@ -253,9 +280,14 @@
             // 
             // btnNum9
             // 
-            this.btnNum9.Location = new System.Drawing.Point(252, 15);
+            this.btnNum9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnNum9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNum9.FlatAppearance.BorderSize = 0;
+            this.btnNum9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNum9.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnNum9.Location = new System.Drawing.Point(329, 21);
             this.btnNum9.Name = "btnNum9";
-            this.btnNum9.Size = new System.Drawing.Size(114, 127);
+            this.btnNum9.Size = new System.Drawing.Size(75, 50);
             this.btnNum9.TabIndex = 17;
             this.btnNum9.Text = "9";
             this.btnNum9.UseVisualStyleBackColor = true;
@@ -263,9 +295,14 @@
             // 
             // btnNum2
             // 
-            this.btnNum2.Location = new System.Drawing.Point(132, 281);
+            this.btnNum2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnNum2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNum2.FlatAppearance.BorderSize = 0;
+            this.btnNum2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNum2.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnNum2.Location = new System.Drawing.Point(209, 178);
             this.btnNum2.Name = "btnNum2";
-            this.btnNum2.Size = new System.Drawing.Size(114, 127);
+            this.btnNum2.Size = new System.Drawing.Size(75, 50);
             this.btnNum2.TabIndex = 16;
             this.btnNum2.Text = "2";
             this.btnNum2.UseVisualStyleBackColor = true;
@@ -273,9 +310,14 @@
             // 
             // btnNum5
             // 
-            this.btnNum5.Location = new System.Drawing.Point(132, 148);
+            this.btnNum5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnNum5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNum5.FlatAppearance.BorderSize = 0;
+            this.btnNum5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNum5.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnNum5.Location = new System.Drawing.Point(209, 100);
             this.btnNum5.Name = "btnNum5";
-            this.btnNum5.Size = new System.Drawing.Size(114, 127);
+            this.btnNum5.Size = new System.Drawing.Size(75, 50);
             this.btnNum5.TabIndex = 15;
             this.btnNum5.Text = "5";
             this.btnNum5.UseVisualStyleBackColor = true;
@@ -283,9 +325,14 @@
             // 
             // btnNum8
             // 
-            this.btnNum8.Location = new System.Drawing.Point(132, 15);
+            this.btnNum8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnNum8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNum8.FlatAppearance.BorderSize = 0;
+            this.btnNum8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNum8.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnNum8.Location = new System.Drawing.Point(209, 21);
             this.btnNum8.Name = "btnNum8";
-            this.btnNum8.Size = new System.Drawing.Size(114, 127);
+            this.btnNum8.Size = new System.Drawing.Size(75, 50);
             this.btnNum8.TabIndex = 14;
             this.btnNum8.Text = "8";
             this.btnNum8.UseVisualStyleBackColor = true;
@@ -293,9 +340,14 @@
             // 
             // btnNum1
             // 
-            this.btnNum1.Location = new System.Drawing.Point(12, 281);
+            this.btnNum1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnNum1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNum1.FlatAppearance.BorderSize = 0;
+            this.btnNum1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNum1.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnNum1.Location = new System.Drawing.Point(89, 178);
             this.btnNum1.Name = "btnNum1";
-            this.btnNum1.Size = new System.Drawing.Size(114, 127);
+            this.btnNum1.Size = new System.Drawing.Size(75, 50);
             this.btnNum1.TabIndex = 13;
             this.btnNum1.Text = "1";
             this.btnNum1.UseVisualStyleBackColor = true;
@@ -303,9 +355,14 @@
             // 
             // btnNum4
             // 
-            this.btnNum4.Location = new System.Drawing.Point(12, 148);
+            this.btnNum4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnNum4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNum4.FlatAppearance.BorderSize = 0;
+            this.btnNum4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNum4.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnNum4.Location = new System.Drawing.Point(89, 100);
             this.btnNum4.Name = "btnNum4";
-            this.btnNum4.Size = new System.Drawing.Size(114, 127);
+            this.btnNum4.Size = new System.Drawing.Size(75, 50);
             this.btnNum4.TabIndex = 12;
             this.btnNum4.Text = "4";
             this.btnNum4.UseVisualStyleBackColor = true;
@@ -313,12 +370,17 @@
             // 
             // btnNum7
             // 
-            this.btnNum7.Location = new System.Drawing.Point(12, 15);
+            this.btnNum7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.btnNum7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnNum7.FlatAppearance.BorderSize = 0;
+            this.btnNum7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNum7.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnNum7.Location = new System.Drawing.Point(89, 21);
             this.btnNum7.Name = "btnNum7";
-            this.btnNum7.Size = new System.Drawing.Size(114, 127);
+            this.btnNum7.Size = new System.Drawing.Size(75, 50);
             this.btnNum7.TabIndex = 11;
             this.btnNum7.Text = "7";
-            this.btnNum7.UseVisualStyleBackColor = true;
+            this.btnNum7.UseVisualStyleBackColor = false;
             this.btnNum7.Click += new System.EventHandler(this.btnNum7_Click);
             // 
             // tbUser
@@ -340,7 +402,7 @@
             // 
             this.panelTxtUser.Controls.Add(this.tbUser);
             this.panelTxtUser.Controls.Add(this.label2);
-            this.panelTxtUser.Location = new System.Drawing.Point(41, 189);
+            this.panelTxtUser.Location = new System.Drawing.Point(3, 110);
             this.panelTxtUser.Name = "panelTxtUser";
             this.panelTxtUser.Size = new System.Drawing.Size(397, 54);
             this.panelTxtUser.TabIndex = 7;
@@ -349,10 +411,19 @@
             // 
             this.panelTxtPasswd.Controls.Add(this.tbPassword);
             this.panelTxtPasswd.Controls.Add(this.label3);
-            this.panelTxtPasswd.Location = new System.Drawing.Point(41, 287);
+            this.panelTxtPasswd.Location = new System.Drawing.Point(3, 208);
             this.panelTxtPasswd.Name = "panelTxtPasswd";
             this.panelTxtPasswd.Size = new System.Drawing.Size(397, 54);
             this.panelTxtPasswd.TabIndex = 8;
+            // 
+            // panelConjunto
+            // 
+            this.panelConjunto.Controls.Add(this.panelTxtUser);
+            this.panelConjunto.Controls.Add(this.panelTxtPasswd);
+            this.panelConjunto.Location = new System.Drawing.Point(49, 77);
+            this.panelConjunto.Name = "panelConjunto";
+            this.panelConjunto.Size = new System.Drawing.Size(403, 264);
+            this.panelConjunto.TabIndex = 9;
             // 
             // Totem
             // 
@@ -360,11 +431,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(503, 589);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelConjunto);
             this.Controls.Add(this.lilblOlvidar);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panelTxtUser);
-            this.Controls.Add(this.panelTxtPasswd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelNumPad);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -382,6 +452,7 @@
             this.panelTxtUser.PerformLayout();
             this.panelTxtPasswd.ResumeLayout(false);
             this.panelTxtPasswd.PerformLayout();
+            this.panelConjunto.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -415,6 +486,7 @@
         private System.Windows.Forms.Button btnNum2;
         private System.Windows.Forms.Button btnNum5;
         private System.Windows.Forms.Button btnNum8;
+        private System.Windows.Forms.Panel panelConjunto;
     }
 }
 

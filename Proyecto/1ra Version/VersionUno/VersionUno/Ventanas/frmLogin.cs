@@ -14,6 +14,7 @@ using System.Threading;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Runtime.CompilerServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
+using System.Xml.Linq;
 
 namespace VersionUno
 {
@@ -45,39 +46,72 @@ namespace VersionUno
             {
                 posicionActualPanelYUser = panelTxtUser.Location.Y;
 
-                posicionActualPanelYPasswd = panelTxtPasswd.Location.Y;
+                posicionActualPanelYPasswd = panelConjunto.Location.Y;
 
                 PanelNumPad.BringToFront();
-                PanelNumPad.Top -= 60;
-                PanelNumPad.Height += 60;
+                PanelNumPad.Top -= 40;
+                PanelNumPad.Height += 40;
                 if (PanelNumPad.Size == PanelNumPad.MaximumSize && tbUser.Focused == true)
                 {
                     numPadVisible = true;
-                    int coordenadaNueva = PanelNumPad.Location.Y - panelTxtUser.Size.Height;
-                    panelTxtUser.Location = new System.Drawing.Point(panelTxtUser.Location.X, coordenadaNueva);
-                    NumPadTimer.Stop();
-                    textBoxSeleccionado = 1;
+
+                    //Obtiene la ubicación del control 'elemento' dentro de 'panel2' en coordenadas de pantalla
+                    Point elementoLocationOnScreen = panelConjunto.PointToScreen(panelTxtUser.Location);
+                    // Convierte las coordenadas de pantalla al sistema de coordenadas cliente del Formulario Principal
+                    Point elementoLocationPrincipal = PointToClient(elementoLocationOnScreen);
+
+                    if (elementoLocationPrincipal.Y > PanelNumPad.Location.Y)
+                    {
+                        int coordenadaNueva = elementoLocationPrincipal.Y - panelTxtUser.Size.Height;
+                        panelTxtUser.Location = new Point(panelTxtUser.Location.X, elementoLocationPrincipal.Y - coordenadaNueva);
+                        NumPadTimer.Stop();
+                        textBoxSeleccionado = 1;
+                        
+                    }
+                    else
+                    {
+                        int coordenadaNueva = panelTxtUser.Location.Y;
+                        panelTxtUser.Location = new Point(panelTxtUser.Location.X, coordenadaNueva);
+                        NumPadTimer.Stop();
+                        textBoxSeleccionado = 1;
+                    }
+                    
                 }
                 else if (PanelNumPad.Size == PanelNumPad.MaximumSize && tbPassword.Focused == true)
                 {
                     numPadVisible = true;
-                    int coordenadaNueva = PanelNumPad.Location.Y - panelTxtPasswd.Size.Height;
-                    panelTxtPasswd.Location = new System.Drawing.Point(panelTxtPasswd.Location.X, coordenadaNueva);
-                    NumPadTimer.Stop();
-                    textBoxSeleccionado = 2;
+                    if ((panelConjunto.Location.Y + panelConjunto.Size.Height) > PanelNumPad.Location.Y)
+                    {
+                        
+                        int coordenadaNueva = PanelNumPad.Location.Y - panelConjunto.Size.Height;
+                        panelConjunto.Location = new Point(panelConjunto.Location.X, coordenadaNueva);
+                        NumPadTimer.Stop();
+                        textBoxSeleccionado = 2;
+                        
+                        
+                    }
+                    else
+                    {
+                        int coordenadaNueva = panelConjunto.Location.Y;
+                        panelConjunto.Location = new Point(panelConjunto.Location.X, coordenadaNueva);
+                        NumPadTimer.Stop();
+                        textBoxSeleccionado = 2;
+                        MessageBox.Show(coordenadaNueva.ToString());
+                    }
+
                 }
             }
             else
             {
-                PanelNumPad.Top += 60;
-                PanelNumPad.Height -= 60;
+                PanelNumPad.Top += 40;
+                PanelNumPad.Height -= 40;
                 if (PanelNumPad.Size == PanelNumPad.MinimumSize)
                 {
                     NumPadTimer.Stop();
                     numPadVisible = false;
                     PanelNumPad.SendToBack();
                     panelTxtUser.Location = new System.Drawing.Point(panelTxtUser.Location.X, posicionActualPanelYUser);
-                    panelTxtPasswd.Location = new System.Drawing.Point(panelTxtPasswd.Location.X, posicionActualPanelYPasswd);
+                    panelConjunto.Location = new System.Drawing.Point(panelConjunto.Location.X, posicionActualPanelYPasswd);
                     textBoxSeleccionado = 0;
                 }
             }
