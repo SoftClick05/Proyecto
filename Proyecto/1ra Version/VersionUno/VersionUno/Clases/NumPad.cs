@@ -13,16 +13,13 @@ namespace VersionUno.Clases
         
         private static void agregarNumero(string numero, TextBox textbox)
         {
-            NumPad numPad = new NumPad();
-
+            
             textbox.Text += numero;
             //  Poner el caret (simbolo que parpadea) despues del ultimo caracter
             //  Esto debido a que al pulsar cualquier boton en el NumPad causa que se quite el foco del textbox, generando conflictos con el timer
             textbox.Select(textbox.Text.Length, 0);
             textbox.Focus();
             textbox.ScrollToCaret();
-            
-
         }
 
         public static void AccionBoton(Button btnNum, TextBox tbUser, TextBox tbPassword, ErrorProvider errorProvider, ErrorProvider errorProvider2, int textBoxSeleccionado)
