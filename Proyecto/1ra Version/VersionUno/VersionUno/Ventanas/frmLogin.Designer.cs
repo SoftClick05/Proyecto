@@ -107,6 +107,7 @@
             this.tbPassword.ForeColor = System.Drawing.Color.DimGray;
             this.tbPassword.Location = new System.Drawing.Point(12, 7);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.ReadOnly = true;
             this.tbPassword.Size = new System.Drawing.Size(364, 22);
             this.tbPassword.TabIndex = 2;
             this.tbPassword.Text = "Password";
@@ -391,6 +392,7 @@
             this.tbUser.ForeColor = System.Drawing.Color.DimGray;
             this.tbUser.Location = new System.Drawing.Point(12, 14);
             this.tbUser.Name = "tbUser";
+            this.tbUser.ReadOnly = true;
             this.tbUser.Size = new System.Drawing.Size(364, 22);
             this.tbUser.TabIndex = 1;
             this.tbUser.Text = "User";

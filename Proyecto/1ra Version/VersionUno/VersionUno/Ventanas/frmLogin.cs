@@ -146,6 +146,7 @@ namespace VersionUno
 
         private void tbPassword_Enter(object sender, EventArgs e)
         {
+            
             if (tbPassword.Text == "Password")
             {
                 tbPassword.Text = "";
@@ -165,13 +166,13 @@ namespace VersionUno
 
         private void tbPassword_Leave(object sender, EventArgs e)
         {
-            if (tbPassword.Text == "" && PanelNumPad.ContainsFocus == false)
-            {
-                tbPassword.Text = "Password";
-                tbPassword.ForeColor = Color.DimGray;
-                //Vuelven a ser visibles los datos
-                tbPassword.UseSystemPasswordChar = false;
-            }
+            //if (tbPassword.Text == "" && PanelNumPad.ContainsFocus == false)
+            //{
+            //    tbPassword.Text = "Password";
+            //    tbPassword.ForeColor = Color.DimGray;
+            //    //Vuelven a ser visibles los datos
+            //    tbPassword.UseSystemPasswordChar = false;
+            //}
             //NumPadTimer.Start();
         }
         // Fin visivilidad
@@ -184,15 +185,13 @@ namespace VersionUno
         private void tbUser_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Validar que solo se ingresen números y controlar la longitud máxima
-            Controles.ValidarNumerico(e, tbUser, errorProvider);
-            Controles.ValidarLargo(e, errorProvider2, tbUser, 8);
+            Controles.ValidarIngreso(e, tbUser, errorProvider);
         }
 
         private void tbPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Validar que solo se ingresen números y controlar la longitud máxima
-            Controles.ValidarNumerico(e, tbPassword, errorProvider);
-            Controles.ValidarLargo(e, errorProvider2, tbPassword, 4);
+            Controles.ValidarIngreso(e, tbPassword, errorProvider);
         }
 
         private void lilblOlvidar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -285,37 +284,7 @@ namespace VersionUno
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (textBoxSeleccionado == 1)
-            {
-                if (!string.IsNullOrEmpty(tbUser.Text) && tbUser.Text.Length > 0)
-                {
-                    tbUser.Text = tbUser.Text.Substring(0, tbUser.Text.Length - 1);
-                    //  Poner el caret (simbolo que parpadea) despues del ultimo caracter
-                    //  Esto debido a que al pulsar cualquier boton en el NumPad causa que se quite el foco del textbox, generando conflictos con el timer
-                    tbUser.Select(tbUser.Text.Length, 0);
-                    tbUser.Focus();
-                    tbUser.ScrollToCaret();
-                }
-                else
-                {
-                    tbUser.Focus();
-                }   
-            }else if (textBoxSeleccionado == 2)
-            {
-                if (!string.IsNullOrEmpty(tbPassword.Text) && tbPassword.Text.Length > 0)
-                {
-                    tbPassword.Text = tbPassword.Text.Substring(0, tbPassword.Text.Length - 1);
-                    //  Poner el caret (simbolo que parpadea) despues del ultimo caracter
-                    //  Esto debido a que al pulsar cualquier boton en el NumPad causa que se quite el foco del textbox, generando conflictos con el timer
-                    tbPassword.Select(tbPassword.Text.Length, 0);
-                    tbPassword.Focus();
-                    tbPassword.ScrollToCaret();
-                }
-                else
-                {
-                    tbPassword.Focus();
-                }
-            }  
+            NumPad.btnDelet(textBoxSeleccionado, tbUser, tbPassword);
         }
     }
 }
