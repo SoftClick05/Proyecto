@@ -100,3 +100,7 @@ C:\Users\Usuario\Desktop\ProyectoDefinitivo\Proyecto\1ra Version\VersionUno\Vers
 C:\Users\Usuario\Desktop\ProyectoDefinitivo\Proyecto\1ra Version\VersionUno\VersionUno\obj\Debug\VersionUno.csproj.CopyComplete
 C:\Users\Usuario\Desktop\ProyectoDefinitivo\Proyecto\1ra Version\VersionUno\VersionUno\obj\Debug\VersionUno.exe
 C:\Users\Usuario\Desktop\ProyectoDefinitivo\Proyecto\1ra Version\VersionUno\VersionUno\obj\Debug\VersionUno.pdb
+C:\Users\Usuario\Desktop\Proyecto Repositorio\Proyecto\Proyecto\1ra Version\VersionUno\VersionUno\bin\Debug\VersionUno.exe.manifest
+C:\Users\Usuario\Desktop\Proyecto Repositorio\Proyecto\Proyecto\1ra Version\VersionUno\VersionUno\bin\Debug\VersionUno.application
+C:\Users\Usuario\Desktop\Proyecto Repositorio\Proyecto\Proyecto\1ra Version\VersionUno\VersionUno\obj\Debug\VersionUno.exe.manifest
+C:\Users\Usuario\Desktop\Proyecto Repositorio\Proyecto\Proyecto\1ra Version\VersionUno\VersionUno\obj\Debug\VersionUno.application

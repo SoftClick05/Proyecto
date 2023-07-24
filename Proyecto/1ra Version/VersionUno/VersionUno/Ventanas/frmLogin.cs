@@ -166,13 +166,13 @@ namespace VersionUno
 
         private void tbPassword_Leave(object sender, EventArgs e)
         {
-            //if (tbPassword.Text == "" && PanelNumPad.ContainsFocus == false)
-            //{
-            //    tbPassword.Text = "Password";
-            //    tbPassword.ForeColor = Color.DimGray;
-            //    //Vuelven a ser visibles los datos
-            //    tbPassword.UseSystemPasswordChar = false;
-            //}
+            if (tbPassword.Text == "" && PanelNumPad.ContainsFocus == false)
+            {
+                tbPassword.Text = "Password";
+                tbPassword.ForeColor = Color.DimGray;
+                //Vuelven a ser visibles los datos
+                tbPassword.UseSystemPasswordChar = false;
+            }
             //NumPadTimer.Start();
         }
         // Fin visivilidad
